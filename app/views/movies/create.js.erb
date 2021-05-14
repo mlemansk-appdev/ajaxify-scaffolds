@@ -1,1 +1,4 @@
-$("#new_movie").after('<tr><td><%= @movie.title %></td><td><%= @movie.year %></td><td><%= @movie.director.name %></td><td><%= @movie.description %></td><td><%= @movie.duration %></td></tr>');
+var added_row = $("<%= j(render "movies/movie_row", movie: @movie) %>");
+
+$("#new_movie").after(added_row);
+
