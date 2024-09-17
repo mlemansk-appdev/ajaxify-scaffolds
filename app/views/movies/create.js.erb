@@ -1,0 +1,4 @@
+var added_row = $("<%= j(render "movies/movie_row", movie: @movie) %>");
+
+$("#new_movie").after(added_row);
+
